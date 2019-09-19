@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Gif from './gif';
 
 class GifList extends Component {
-  renderList = () => {
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} />);
+  renderList = ({ gifs }) => {
+    return gifs.map(({ id }) => <Gif id={id} key={id} />);
   }
 
   render() {
